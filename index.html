@@ -12,11 +12,7 @@
     <div class="background-overlay"></div>
     <div class="container">
         <section id="tentang-saya">
-            <h1>
-                <a href="" class="typewrite" data-period="2000" data-type='[ "salambaee.github.io", "salambaee.github.io", "salambaee.github.io", "salambaee.github.io" ]'>
-                <span class="wrap"></span>
-                </a>
-            </h1>
+            <h1>salambaee.github.io</h1>
         </section>
     </div>
     <div class="explore">
@@ -24,37 +20,37 @@
             <img src="linux-img.jpg" alt="Linux">
             <h3>Linux</h3>
             <p>Pelajari dasar-dasar Linux dan menjadi ahli dalam sistem operasi open-source ini.</p>
-            <a href="#">Explore</a>
+            <a href="linux/">Explore</a>
         </div>
         <div class="card">
             <img src="arduino-img.jpg" alt="Arduino">
             <h3>Arduino</h3>
             <p>Mulai perjalanan Anda dengan pengembangan hardware menggunakan Arduino.</p>
-            <a href="#">Explore</a>
+            <a href="arduino/">Explore</a>
         </div>
         <div class="card">
             <img src="programming-img.jpg" alt="Programming">
             <h3>Programming</h3>
             <p>Belajar bahasa pemrograman populer untuk pengembangan perangkat lunak.</p>
-            <a href="#">Explore</a>
+            <a href="programming/">Explore</a>
         </div>
         <div class="card">
             <img src="cyber-img.jpg" alt="Cyber-Security">
             <h3>Cyber Security</h3>
             <p>Di dunia yang semakin digital, menguasai cybersecurity adalah keterampilan yang tak ternilai.</p>
-            <a href="#">Explore</a>
+            <a href="cyber-security/">Explore</a>
         </div>
         <div class="card">
             <img src="elektronika-img.jpg" alt="Electronics">
             <h3>Electronics</h3>
             <p>Setiap rangkaian adalah teka-teki yang menunggu untuk diselesaikan. Mari pecahkan bersama!</p>
-            <a href="#">Explore</a>
+            <a href="electronics/">Explore</a>
         </div>
         <div class="card">
             <img src="https://miro.medium.com/v2/resize:fit:786/format:webp/1*n_zcLcSnSQfOD2fm1sB4bg.jpeg" alt="Hardware-Hacking">
             <h3>Hardware Hacking</h3>
             <p>Eksplorasi teknologi dan rangkaian perangkat. Pelajari cara mengutak-atik dan temukan rahasia teknologi.</p>
-            <a href="#">Explore</a>
+            <a href="hardware-hacking/">Explore</a>
         </div>
     </div>
     <footer>
@@ -74,58 +70,5 @@
             </div>
         </div>
     </footer>
-    <script>
-        var TxtType = function(el, toRotate, period) {
-        this.toRotate = toRotate;
-        this.el = el;
-        this.loopNum = 0;
-        this.period = parseInt(period, 10) || 2000;
-        this.txt = '';
-        this.tick();
-        this.isDeleting = false;
-    };
-
-    TxtType.prototype.tick = function() {
-        var i = this.loopNum % this.toRotate.length;
-        var fullTxt = this.toRotate[i];
-
-        if (this.isDeleting) {
-        this.txt = fullTxt.substring(0, this.txt.length - 1);
-        } else {
-        this.txt = fullTxt.substring(0, this.txt.length + 1);
-        }
-
-        this.el.innerHTML = '<span class="wrap">'+this.txt+'</span>';
-
-        var that = this;
-        var delta = 200 - Math.random() * 100;
-
-        if (this.isDeleting) { delta /= 2; }
-
-        if (!this.isDeleting && this.txt === fullTxt) {
-        delta = this.period;
-        this.isDeleting = true;
-        } else if (this.isDeleting && this.txt === '') {
-        this.isDeleting = false;
-        this.loopNum++;
-        delta = 500;
-        }
-
-        setTimeout(function() {
-        that.tick();
-        }, delta);
-    };
-
-    window.onload = function() {
-        var elements = document.getElementsByClassName('typewrite');
-        for (var i=0; i<elements.length; i++) {
-            var toRotate = elements[i].getAttribute('data-type');
-            var period = elements[i].getAttribute('data-period');
-            if (toRotate) {
-              new TxtType(elements[i], JSON.parse(toRotate), period);
-            }
-        }
-    };
-    </script>
 </body>
 </html>
