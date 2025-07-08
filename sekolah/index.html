@@ -1,0 +1,409 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>SMPN 2 Banyuwangi</title>
+    <link rel="icon" href="https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEgBqPHEKsci-cV08ilfpV7l1Dqq5moe3UA4kdhwTdW-bya3Jle3v5rF-AOJz3cLxplf96Pcoa-Ritnc2ZqtvAw6tHYqDKbhz0jNLanRoZuZVoci8cKVyBN7ZJoYDguA4A3l1B00Swo1ex8/w173-h200/logo+transparan.png" type="image/png">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.5/font/bootstrap-icons.css" rel="stylesheet">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+    <script>
+        window.addEventListener('scroll', function () {
+            const navbar = document.querySelector('.navbar-custom');
+            if (window.scrollY > 40) {
+                navbar.classList.add('navbar-scrolled');
+            } else {
+                navbar.classList.remove('navbar-scrolled');
+            }
+        });
+    </script>
+  <style>
+    body {
+        font-family: 'Poppins', sans-serif;
+    }
+
+    .hero {
+        position: relative;
+        background: url('https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEhVpoM03P73ALoP1O-_p_LZGGbCoGVD19sdV3ogNZpkIkSAe7i-Mx3uOp86bRBKGz_qtUuweQMXOchHFJo8JyGVVEMhfMjPZ9N4-m20L9dlw2Rto4cLm0UT7z3xRDfYHTXHA7i33Ddj54w/s320/IMG_0120.JPG') no-repeat center center/cover;
+        height: 100vh;
+        color: white;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        z-index: 1;
+    }
+
+    .hero::before {
+        content: "";
+        position: absolute;
+        top: 0; left: 0;
+        width: 100%;
+        height: 100%;
+        background: rgba(0, 0, 0, 0.6); /* gelapnya bisa diatur */
+        z-index: 0;
+    }
+
+    .hero .container {
+        position: relative;
+        z-index: 1; /* agar teks di atas overlay */
+    }
+
+    .features .card {
+        transition: transform 0.3s ease;
+    }
+
+    .features .card:hover {
+        transform: translateY(-5px);
+    }
+
+    footer {
+        background-color: #002b5b;
+        color: white;
+        padding: 20px 0;
+    }
+
+    .navbar-custom {
+        background-color: transparent;
+        position: fixed;
+        top: 0;
+        left: 0;
+        width: 100%;
+        z-index: 10;
+        transition: background-color 0.3s ease, backdrop-filter 0.3s ease;
+    }
+
+    .text-justify {
+        text-align: justify;
+    }
+
+    .navbar-custom .navbar-brand, .navbar-custom .nav-link {
+        color: white !important;
+        text-shadow: 1px 1px 2px rgba(0,0,0,0.5);
+    }
+
+    .navbar-custom .nav-link:hover {
+        color: #ffc107 !important;
+    }
+
+    .navbar-custom.navbar-scrolled .navbar-brand, .navbar-custom.navbar-scrolled .nav-link {
+        text-shadow: none !important;
+    }
+
+    .navbar-custom.navbar-scrolled {
+        background-color: #002b5b;
+        backdrop-filter: blur(8px);
+        -webkit-backdrop-filter: blur(8px);
+    }
+
+  </style>
+</head>
+<body>
+    <nav class="navbar navbar-expand-lg navbar-dark navbar-custom">
+        <div class="container">
+            <a class="navbar-brand fw-bold" href="#">SMPN 2 Banyuwangi</a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navMenu">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navMenu">
+                <ul class="navbar-nav ms-auto">
+                    <li class="nav-item"><a class="nav-link" href="#">Beranda</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#">Profil</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#">Program</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#">PPDB</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#">Kontak</a></li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+    <section class="hero text-center">
+        <div class="container">
+            <h1 class="display-4 fw-bold">Selamat Datang di SMPN 2 Banyuwangi</h1>
+            <p class="lead">Mencetak generasi unggul, mandiri, dan berakhlak mulia</p>
+            <a href="#program" class="btn btn-light btn-lg mt-3">Lihat Profil Sekolah</a>
+        </div>
+    </section>
+
+    <section class="py-4 bg-white">
+        <div class="container">
+            <h2 class="mb-4 text-center fw-semibold">Profil Sekolah</h2>
+            <p class="text-justify">
+                <strong>SMP Negeri 2 Banyuwangi</strong> merupakan sekolah yang didirikan pada tahun 1945 yang awal mulanya berkonsentrasi pada program ekonomi dengan nama SMEP (Sekolah Menengah Ekonomi Pertama) yang beralamat di jalan Jaksa Agung Suprapto nomor 68 depan Kejaksaan Negeri Banyuwangi. Saat bernama SMEP, sekolah ini dipimpin oleh Bapak R. Slamet Perubahan status SMEP menjadi SMP Negeri 2 Banyuwangi didasarkan atas Surat Keputusan Menteri Pendidikan dan Kebudayaan RI nomor 30/U/1979 tanggal 17 Februari 1979. Sejak tahun 1986 SMP Negeri 2 Banyuwangi kemudian pindah di jalan Trunojoyo (sekarang jalan Ranggawuni) nomor 41 yang notabene berdekatan dengan kantor Dinas Pendidikan Banyuwangi.
+            </p>
+            <p class="text-justify">
+                Jumlah personalia yang "mengawaki" SMP Negeri 2 Banyuwangi mencapai 42 orang dengan rincian, 31 merupakan guru PNS, 11 guru tidak tetap, 1 karyawan TU PNS, dan 12 pegawai tidak tetap.
+            </p>
+            <p class="text-justify">
+                Selain kegiatan akademik, sekolah ini juga aktif menyelenggarakan berbagai kegiatan ekstrakurikuler untuk mendukung minat dan bakat siswa, mulai dari olahraga, seni, hingga kegiatan ilmiah. SMPN 2 Banyuwangi percaya bahwa pendidikan terbaik adalah yang menyeluruh, baik dari segi ilmu pengetahuan maupun karakter.
+            </p>
+        </div>
+    </section>
+<section class="py-4 bg-light">
+  <div class="container text-center">
+    <div class="row g-4">
+      <div class="col-md-12">
+        <div class="card border-primary h-100 shadow-sm">
+          <div class="card-body">
+            <h5 class="card-title text-primary fw-bold">VISI</h5>
+            <p class="card-text">
+              Mewujudkan generasi yang unggul dalam akademik dan non-akademik, berkarakter profil pelajar Pancasila, berwawasan global, serta peduli lingkungan.
+            </p>
+          </div>
+        </div>
+      </div>
+
+      <!-- Misi 1 -->
+      <div class="col-md-4">
+        <div class="card h-100 p-3">
+          <div class="card-body">
+            <h6 class="card-title fw-semibold text-success">1. Pembelajaran Bermakna</h6>
+            <p class="card-text">Pelaksanaan pembelajaran dan penilaian yang aktif dan reflektif.</p>
+          </div>
+        </div>
+      </div>
+
+      <!-- Misi 2 -->
+      <div class="col-md-4">
+        <div class="card h-100 p-3">
+          <div class="card-body">
+            <h6 class="card-title fw-semibold text-success">2. Kegiatan P5 & Ekstrakurikuler</h6>
+            <p class="card-text">Mendorong siswa aktif di kegiatan pengembangan karakter dan minat.</p>
+          </div>
+        </div>
+      </div>
+
+      <!-- Misi 3 -->
+      <div class="col-md-4">
+        <div class="card h-100 p-3">
+          <div class="card-body">
+            <h6 class="card-title fw-semibold text-success">3. Teknologi & Lingkungan</h6>
+            <p class="card-text">Pemanfaatan teknologi dan kepedulian terhadap lingkungan sekolah.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+
+<section class="py-2 bg-white">
+    <div class="container text-center">
+        <h2 class="mb-4 fw-bold">Berita Sekolah</h2>
+        <div class="row g-4">
+            <!-- Berita 1 -->
+            <div class="col-md-4">
+                <div class="card h-100">
+                    <img src="https://placehold.co/400x200" class="card-img-top" alt="Berita 1">
+                    <div class="card-body text-start">
+                        <h5 class="card-title fw-semibold">SMPN 2 Banyuwangi Gelar Kegiatan "CILUKBA"</h5>
+                        <small class="text-muted d-block mb-2">
+                            <i class="bi bi-person-fill"></i> HUMAS SMPN 2 &nbsp; 
+                            <i class="bi bi-calendar-event"></i> 6 Juli 2025
+                        </small>
+                        <p class="card-text">Setiap hari Jumat, SMP Negeri 2 Banyuwangi mengadakan kegiatan kerja bakti bertajuk CILUKBA...</p>
+                        <a href="#" class="btn btn-primary btn-sm">Baca Selengkapnya</a>
+                    </div>
+                </div>
+            </div>
+            <!-- Berita 2 -->
+            <div class="col-md-4">
+                <div class="card h-100">
+                    <img src="https://placehold.co/400x200" class="card-img-top" alt="Berita 2">
+                    <div class="card-body text-start">
+                        <h5 class="card-title fw-semibold">Batas Akhir Pendaftaran UTBK Mandiri</h5>
+                        <small class="text-muted d-block mb-2">
+                            <i class="bi bi-person-fill"></i> HUMAS SMPN 2 &nbsp;
+                            <i class="bi bi-calendar-event"></i> 5 Juli 2025
+                        </small>
+                        <p class="card-text">Kami mengingatkan seluruh peserta seleksi mandiri bahwa batas akhir pendaftaran UTBK adalah...</p>
+                        <a href="#" class="btn btn-primary btn-sm">Baca Selengkapnya</a>
+                    </div>
+                </div>
+            </div>
+            <!-- Berita 3 -->
+            <div class="col-md-4">
+                <div class="card h-100">
+                    <img src="https://placehold.co/400x200" class="card-img-top" alt="Berita 3">
+                    <div class="card-body text-start">
+                        <h5 class="card-title fw-semibold">Hasil Seleksi Beasiswa KIP-K Jalur Prestasi</h5>
+                        <small class="text-muted d-block mb-2">
+                            <i class="bi bi-person-fill"></i> HUMAS SMPN 2 &nbsp;
+                            <i class="bi bi-calendar-event"></i> 4 Juli 2025
+                        </small>
+                        <p class="card-text">Berikut hasil seleksi beasiswa KIP-K jalur prestasi bagi siswa yang telah mendaftar pada periode ini...</p>
+                        <a href="#" class="btn btn-primary btn-sm">Baca Selengkapnya</a>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Baris Kedua -->
+            <!-- Berita 4 -->
+            <div class="col-md-4">
+                <div class="card h-100">
+                    <img src="https://placehold.co/400x200" class="card-img-top" alt="Berita 4">
+                    <div class="card-body text-start">
+                        <h5 class="card-title fw-semibold">Pelatihan Kewirausahaan untuk Siswa Kelas 9</h5>
+                        <small class="text-muted d-block mb-2">
+                            <i class="bi bi-person-fill"></i> TIM EDITORIAL &nbsp;
+                            <i class="bi bi-calendar-event"></i> 3 Juli 2025
+                        </small>
+                        <p class="card-text">Pelatihan ini bertujuan menumbuhkan jiwa wirausaha sejak dini di kalangan pelajar SMP...</p>
+                        <a href="#" class="btn btn-primary btn-sm">Baca Selengkapnya</a>
+                    </div>
+                </div>
+            </div>
+            <!-- Berita 5 -->
+            <div class="col-md-4">
+                <div class="card h-100">
+                    <img src="https://placehold.co/400x200" class="card-img-top" alt="Berita 5">
+                    <div class="card-body text-start">
+                        <h5 class="card-title fw-semibold">Sosialisasi Bahaya Narkoba di Kalangan Pelajar</h5>
+                        <small class="text-muted d-block mb-2">
+                            <i class="bi bi-person-fill"></i> POLRES BWI &nbsp;
+                            <i class="bi bi-calendar-event"></i> 2 Juli 2025
+                        </small>
+                        <p class="card-text">Polres Banyuwangi memberikan penyuluhan kepada siswa-siswi mengenai bahaya narkoba dan cara menghindarinya...</p>
+                        <a href="#" class="btn btn-primary btn-sm">Baca Selengkapnya</a>
+                    </div>
+                </div>
+            </div>
+            <!-- Berita 6 -->
+            <div class="col-md-4">
+                <div class="card h-100">
+                    <img src="https://placehold.co/400x200" class="card-img-top" alt="Berita 6">
+                    <div class="card-body text-start">
+                        <h5 class="card-title fw-semibold">Lomba Kebersihan Antar Kelas Sukses Digelar</h5>
+                        <small class="text-muted d-block mb-2">
+                            <i class="bi bi-person-fill"></i> OSIS SMPN 2 &nbsp;
+                            <i class="bi bi-calendar-event"></i> 1 Juli 2025
+                        </small>
+                        <p class="card-text">Lomba kebersihan antar kelas memacu siswa untuk menjaga lingkungan belajar tetap bersih dan nyaman...</p>
+                        <a href="#" class="btn btn-primary btn-sm">Baca Selengkapnya</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <a href="#" class="btn btn-secondary mt-4">Lainnya</a>
+    </div>
+</section>
+
+    <section class="py-4 bg-white">
+        <div class="container">
+            <div class="table-responsive">
+                <table class="table table-bordered table-striped align-middle text-center">
+                    <thead class="table-primary">
+                        <tr>
+                            <th>No</th>
+                            <th>Tanggal</th>
+                            <th>Kegiatan</th>
+                            <th>Tempat</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>1</td>
+                            <td>08 Juli 2025</td>
+                            <td>Masa Pengenalan Lingkungan Sekolah (MPLS)</td>
+                            <td>Aula SMPN 2</td>
+                        </tr>
+                        <tr>
+                            <td>2</td>
+                            <td>15 Juli 2025</td>
+                            <td>Upacara Hari Pramuka</td>
+                            <td>Lapangan Sekolah</td>
+                        </tr>
+                        <tr>
+                            <td>3</td>
+                            <td>20 Juli 2025</td>
+                            <td>Rapat Komite dan Wali Murid</td>
+                            <td>Ruang Rapat 1</td>
+                        </tr>
+                        <tr>
+                            <td>4</td>
+                            <td>28 Juli 2025</td>
+                            <td>Pelatihan Ekstrakurikuler Perdana</td>
+                            <td>Ruang Ekskul</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+        </div>
+    </section>
+
+    <section class="py-2 bg-white">
+        <div class="container text-center mb-5">
+            <div class="row features g-4">
+                <div class="col-md-4">
+                    <div class="card h-100 p-3">
+                        <div class="card-body">
+                            <div class="mb-3">
+                                <i class="bi bi-people-fill fs-1 text-primary"></i>
+                            </div>
+                            <h5 class="card-title fw-semibold">Daftar Guru</h5>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-4">
+                    <div class="card h-100 p-3">
+                        <div class="card-body">
+                            <div class="mb-3">
+                                <i class="bi bi-megaphone-fill fs-1 text-success"></i>
+                            </div>
+                            <h5 class="card-title fw-semibold">Pengumuman Sekolah</h5>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-4">
+                    <div class="card h-100 p-3">
+                        <div class="card-body">
+                            <div class="mb-3">
+                                <i class="bi bi-trophy-fill fs-1 text-warning"></i>
+                            </div>
+                            <h5 class="card-title fw-semibold">Ekstrakurikuler</h5>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-4">
+                    <div class="card h-100 p-3">
+                        <div class="card-body">
+                            <div class="mb-3">
+                                <i class="bi bi-award-fill fs-1 text-danger"></i>
+                            </div>
+                            <h5 class="card-title fw-semibold">Prestasi</h5>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-4">
+                    <div class="card h-100 p-3">
+                        <div class="card-body">
+                            <div class="mb-3">
+                                <i class="bi bi-pencil-square fs-1 text-info"></i>
+                            </div>
+                            <h5 class="card-title fw-semibold">PPDB</h5>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-4">
+                    <div class="card h-100 p-3">
+                        <div class="card-body">
+                            <div class="mb-3">
+                                <i class="bi bi-telephone-fill fs-1 text-secondary"></i>
+                            </div>
+                            <h5 class="card-title fw-semibold">Kontak</h5>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <footer class="text-center">
+        <div class="container">
+            <p class="mb-1 fw-bold">SMP Negeri 2 Banyuwangi</p>
+            <small>Jl. Ranggawuni No. 41, Kebalenan, Kecamatan Banyuwangi, Kabupaten Banyuwangi, Jawa Timur, 68417 | Email: info@smkn1contoh.sch.id</small><br>
+            <small>&copy; 2025 SMP Negeri 2 Banyuwangi. All rights reserved.</small>
+        </div>
+    </footer>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>
